@@ -1,0 +1,226 @@
+/*ESTILOS ESCRITORIO Detalle Mario*/
+
+                        /* Globales */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+@keyframes tilt-n-move-shaking {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(5px, 5px) rotate(5deg); }
+    50% { transform: translate(0, 0) rotate(0eg); }
+    75% { transform: translate(-5px, 5px) rotate(-5deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+body{
+    background-color: #181419;
+    color: #ffffff;
+}
+
+.header{
+    background-color:#9f3647;
+    color:#ffffff;
+    height: 10vh;
+    position:sticky;
+    top: 0;
+    z-index:10;
+
+    display: block;
+    unicode-bidi: isolate;
+
+    .navegacion{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left:40px;
+        margin-right: 40px;
+        padding: 1.5rem 0;
+
+            .anclaLogo{
+                text-decoration: none;
+                color: #ffffff;
+                font-weight: 700;
+                font-size: 1.2rem;
+                /*animacion hover*/
+                &:hover{
+                    animation: tilt-n-move-shaking 0.25s infinite;
+                }
+            }
+
+            .listaNav{
+                list-style: none;
+                display: flex;
+                align-items: center;
+
+                .listaItem{
+                    margin-right:20px;
+                    
+                    .linkNav{
+                        text-decoration: none;
+                        color:#ffffff;
+                        font-weight: 700;
+                        font-size: 1.1rem;
+                        padding: 0.5rem 1rem;
+                        /* Agregar efecto de botón presionado */
+                        transition: transform 0.3s, box-shadow 0.3s;
+                        &:hover {
+                            transform: scale(0.95);
+                            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+                            border-radius: 5px;
+                        }
+                    }
+
+                    .linkNav.iniciarSesion{
+                        background-color: #181419;
+                        color: white;
+                        
+                        border-radius: 5px;
+                         /* Agregar efecto de botón presionado */
+                        transition: transform 0.3s, box-shadow 0.3s;
+                        &:hover {
+                            background-color: #9f3647;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+.mainDetalle{
+    
+    .detalle{
+        padding-top:50px;
+        background:linear-gradient(to right top, #6d6969a7, #6d6969a7),url("../../assets/mario-bg.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 70vh;
+
+        .contenedorDetalle{
+            width:75%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 60px;
+
+            img{
+                border-radius: 20px;
+            }
+
+            .textoDetalle{
+
+                h1{
+                    font-size: 2.2rem;
+                    font-weight: 700;
+                }
+
+                h2{
+                    margin-top:20px;
+                }
+
+                .contenedorCreditos{
+                    margin-top:20px;
+                    display: flex;
+                    justify-content:space-between;
+                }
+            }
+        }
+    }
+
+    .trailer{
+        padding-top:150px;
+        padding-bottom: 100px;
+        width:75%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 70px;
+
+        .contenedorInfo{
+
+            .redes{
+                margin-bottom: 20px;
+
+                ul{
+                    list-style: none;
+                    display: flex;
+                    column-gap: 20px;
+
+                    li{
+
+                        a{
+                            text-decoration: none;
+                            color: #ffffff;
+                            font-size: 2.5rem;
+                            margin-right: 50px;
+                        }
+                    }
+                }
+            }
+
+            .info{
+
+                table{
+                    width: 100%;
+
+                    tr{
+
+                        td{
+                            font-size: 1.2rem;
+                            padding: 10px 0px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+.footer{
+    background-color:#9f3647;
+    color:#ffffff;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .listaNav{
+        list-style: none;
+        display: flex;
+        align-items: center;
+
+        .listaItem{
+            margin-left:20px;
+
+            .linkNav{
+                text-decoration: none;
+                color:#ffffff;
+                font-weight: 700;
+                font-size: 1.2rem;
+            }
+
+            .administradorPeliculas{
+                background-color: #181419;
+                color: white;
+                padding: 0.5rem 1rem;
+                border-radius: 5px;
+            }
+        }
+    }
+    .flechaArriba{
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        color: white;
+        cursor: pointer;
+    }
+}
